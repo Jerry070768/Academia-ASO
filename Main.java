@@ -1,9 +1,11 @@
-import java.util.function.Consumer;
+
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
-        Consumer<String> consumer = (s) -> System.out.println(s);
-        consumer.accept("Ejercicio 1 : Interface funcional Consumer");
-        consumer.accept("Ejercicio 2 : Gerardo Rodríguez Trejo");
+        Supplier<String> supplier = () -> "Ejemplo de Interface Funcional Supplier";
+        Supplier<String> supplier2 = () -> "Gerardo Rodríguez Trejo";
+        System.out.println(supplier.get());
+        System.out.println(supplier.equals(supplier));
     }
 }
